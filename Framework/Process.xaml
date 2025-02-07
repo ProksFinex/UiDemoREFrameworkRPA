@@ -105,6 +105,7 @@
       <Variable x:TypeArguments="x:Decimal" Name="CashIn" />
       <Variable x:TypeArguments="x:Decimal" Name="OnUsCheck" />
       <Variable x:TypeArguments="x:Decimal" Name="NotOnUsCheck" />
+      <Variable x:TypeArguments="x:String" Name="TransactionNumber" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -190,10 +191,10 @@
     </Sequence>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UiDemo_AddTransaction - Invoke Workflow File (UiDemo\UiDemo_AddTransaction.xaml)" sap:VirtualizedContainerService.HintSize="484,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UiDemo\UiDemo_AddTransaction.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Decimal" x:Key="in_CashIn" />
-        <InArgument x:TypeArguments="x:Decimal" x:Key="in_OnUsCheck" />
-        <InArgument x:TypeArguments="x:Decimal" x:Key="in_NotOnUsCheck" />
-        <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionNumber" />
+        <InArgument x:TypeArguments="x:Decimal" x:Key="in_CashIn">[CashIn]</InArgument>
+        <InArgument x:TypeArguments="x:Decimal" x:Key="in_OnUsCheck">[OnUsCheck]</InArgument>
+        <InArgument x:TypeArguments="x:Decimal" x:Key="in_NotOnUsCheck">[NotOnUsCheck]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionNumber">[TransactionNumber]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
