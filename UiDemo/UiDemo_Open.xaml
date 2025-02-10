@@ -82,7 +82,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open UiDemo desktop app and login using the credential stored in Orchestrator.&#xA;&#xA;Pre-condition: none.&#xA;&#xA;Post-actions: UiDemo app is ready to be used." DisplayName="UiDemo_Open" sap:VirtualizedContainerService.HintSize="1066,1470" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Open UiDemo desktop app and login using the credential stored in Orchestrator.&#xA;&#xA;Pre-condition: none.&#xA;&#xA;Post-actions: UiDemo app is ready to be used." DisplayName="UiDemo_Open" sap:VirtualizedContainerService.HintSize="1116,1501" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Username" />
       <Variable x:TypeArguments="ss:SecureString" Name="Password" />
@@ -95,13 +95,13 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Workflow Start" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[String.Format(&quot;Opening UiDemo from {0} with the credential named {1}&quot;, in_UiDemoAppPath, in_CredentialName)]" />
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="UiDemo_CredentialName" CacheStrategy="None" DisplayName="Get Credential - UiDemo" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[Username]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="UiDemo" sap:VirtualizedContainerService.HintSize="450,1027" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="b478247b-3cfb-408c-b34b-9e932017a1f6" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="UiDemo" sap:VirtualizedContainerService.HintSize="450,1035" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="b478247b-3cfb-408c-b34b-9e932017a1f6" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,713" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,744" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -111,14 +111,14 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="138, 113, 150, 29" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='user' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='user' role='editable text' /&gt;" Guid="b14ec0f8-66a2-40f7-8c93-f9228dda6609" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAhCAYAAAAh8rKhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACZSURBVHhe7dshDsJQFEVB9r8VgmJhRdd8UtEmCGr6e9RMct2Tx77HgIDQSByhPV9vs+nb/YS2LJ+xrqvZ5W0t/Q1tO4AZtpaExu2ERkJoJIRGQmgkhEZCaCSERkJoJIRGQmgkhEZCaCSERkJoJIRGQmgkhEZCaCSERkJoJIRGQmgkhEbiNDSf6jZrp5/qZrO3O0KDOwmNwBhfQtu5soYsH9UAAAAASUVORK5CYII=" InformativeScreenshot="a68d8c8681d544921b473096a6255ae7.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                       <uix:Target DesignTimeRectangle="29, 109, 79, 33" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Username' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Username' role='text' automationid='' check:text='Username' /&gt;" Guid="e1419aae-1a02-43e9-a628-8eed9087c5c8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAlCAYAAAA+ydXcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHnSURBVGhD7ZS7ccMwEETZgUpQAWoHVagAF0CFjh0rZ+ZUNTByC44VKj6D+JC4I/iRtJn3zXA0JIjD3iOgRggMygRCmUAoEwhlAqFMIJQJhDKBUCYQygRCmUAoEwhlAqFMIDtkPqRvT3JwnfymJyOPXtrTUS59uv/nUCYQygQClnmXzjXSNOk6XmTyvDJ278Q1vs5t+E1jofZBXPdTzBvuyxSm5sHJNBzHjpdb8U7M+uhbOeU5KuNA7Ldecx2gTPuev/+6pqC5sRzbvBtkmsZC7aGh6WPdO6eb8/POSzVH0TqfEpjWWMzlCWvOhNeBy5yCTYSdYAMNArOYINPsulmjHrXeHL2O/YCefALUI6c/qt2JG2uWQI/5eHxMoPB187FRV5pbaTLWrgnWz9SRHa4tmZVsubdZrfGyfy91dsjUCyoWvlqWl+eE+7Wj8pLMdGwLObt25pZMuzOfYJfMxUVqxyJTiN4M+YrMon7mXZnVHE+wS2YMPu20QHo2hfXhz8XuU8FiY3b+58dKE6W4jHpmZKU87xxzXyTudnWKTF8r7JMZiOHK/xIVNAcZx2tyyvnF+EsyPWFequclXb/f3JkB26fJsMITMskWlAmEMoFQJhDKBEKZQCgTCGUCoUwglAmEMoFQJgyRPwL5tdqxdRbJAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="b478247b-3cfb-408c-b34b-9e932017a1f6" SecureText="[Password]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="b478247b-3cfb-408c-b34b-9e932017a1f6" SecureText="[Password]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="138, 167, 150, 29" ElementType="InputBoxPassword" FullSelectorArgument="&lt;ctrl automationid='pass' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='pass' role='editable text' /&gt;" Guid="e516142d-2713-4a3c-b04b-01df7ce9c2ae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAhCAYAAAAh8rKhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACZSURBVHhe7dshDsJQFEVB9r8VgmJhRdd8UtEmCGr6e9RMct2Tx77HgIDQSByhPV9vs+nb/YS2LJ+xrqvZ5W0t/Q1tO4AZtpaExu2ERkJoJIRGQmgkhEZCaCSERkJoJIRGQmgkhEZCaCSERkJoJIRGQmgkhEZCaCSERkJoJIRGQmgkhEbiNDSf6jZrp5/qZrO3O0KDOwmNwBhfQtu5soYsH9UAAAAASUVORK5CYII=" InformativeScreenshot="64c0733c65b0c20725aaddb63708cb25.png" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -129,7 +129,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b478247b-3cfb-408c-b34b-9e932017a1f6" Version="V1">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="382,182" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b478247b-3cfb-408c-b34b-9e932017a1f6" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="123, 239, 94, 25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Log In' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Log In' role='push button' automationid='' check:text='Log In' /&gt;" Guid="30a1e338-6a13-4f4f-ba22-9d27765ce9ec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAdCAYAAABR0bkaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFqSURBVGhD7ZpBqoMwEIaDeB83XsaVV/AGwsN7WOoxBM/gWvQs80yMGuNoaWniWGbgg5oxtvxfjVkogItEsQgitYjIsoy5gLk2Itq2hWEYGA/IrA9FYBMYd7AIIrAIIrAIIrAIIrAIIlwsooMyCSAuGqTniL6GPAohrZDehbAIIrAIIhAX0UOdRyCE0CDnqmCN/t/jPGhbRFdCIsbjp3kd/6IIi5A9AUFcQDOPqdCM87WEMK30nFncuyLG8IMYikaO6WuEKVT2XIeQFdHXOURLOCtdmSxy5OddYK+WHlSE9RvkGPLdLiErAg15RAlS49M/d3PHSD4SYZ2PjTmGtIhdyCO2iHVZ0rCIT3CwNL0KkUVgHIuYetjD2g7RnD/Nef9hzSJ0cFvW8O0+Eo4KzeirbehJiCzCEzJEzzueb/BjIpDl7CbcW8RmWZrY7aJuwo/dEfflUAS/xeGP07c4GP/MtYjgurZYBIkC+AcsPl1uwnLsXQAAAABJRU5ErkJggg==" InformativeScreenshot="473c2e9d65603d7a68d841e8f8047810.png" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
